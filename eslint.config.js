@@ -27,28 +27,16 @@ export default tseslint.config(
       },
       rules: {
         ...reactHooks.configs.recommended.rules,
-        'react-refresh/only-export-components': [
-          'warn',
+        "no-unused-vars": "off",
+        "@typescript-eslint/no-unused-vars": "warn",
+        "no-use-before-define": "off",
+        "@typescript-eslint/no-use-before-define": ["warn", { typedefs: false }],
+        "react-refresh/only-export-components": [
+          "warn",
           { allowConstantExport: true },
         ],
         "prettier/prettier": "error", // <-- Hacer que ESLint use Prettier
       },
-      // rules: {
-      //   ...reactHooks.configs.recommended.rules,
-      //   quotes: "off",
-      //   "quote-props": "off",
-      //   semi: [1, "always", { omitLastInOneLineBlock: true }],
-      //   "no-unused-expressions": "off",
-      //   "no-unused-vars": "warn",
-      //   "no-use-before-define": "off",
-      //   "no-absolute-path": "off",
-      //   "@typescript-eslint/no-use-before-define": ["error", { typedefs: false }],
-      //   "react-refresh/only-export-components": [
-      //     "warn",
-      //     { allowConstantExport: true },
-      //   ],
-      //   "prettier/prettier": "warn", // <-- Hacer que ESLint use Prettier
-      // },
     },
     configPrettier
 )
