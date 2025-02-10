@@ -28,5 +28,5 @@ export const App = () => {
             similique, amet quia temporibus perferendis repellat assumenda.
         </div>
   </section>
-  )
-}
+  );
+};

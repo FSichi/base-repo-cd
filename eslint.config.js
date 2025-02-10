@@ -13,6 +13,7 @@ export default tseslint.config(
     languageOptions: {
       ecmaVersion: 2020,
       globals: globals.browser,
+      // parser: '@typescript-eslint/parser',
     },
     plugins: {
       'react-hooks': reactHooks,
@@ -39,5 +40,5 @@ export default tseslint.config(
       ],
     },
   },
-  configPrettier,
+  // configPrettier,
 )
