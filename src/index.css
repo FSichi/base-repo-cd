@@ -1,0 +1,163 @@
+@import "tailwindcss";
+
+@theme {
+  /*  
+    Si quieren customizar esto. Utilicen esta referencia de Tailwind V4: 
+    https://tailwindcss.com/docs/theme#theme-variable-namespaces 
+  */
+
+  --breakpoint-3xl: 1920px;
+  --breakpoint-xl+: 1440px;
+
+  --spacing-small: 32px;
+  --spacing-medium: 40px;
+  --spacing-large: 48px;
+
+  --color-avocado-100: oklch(0.99 0 0);
+  --color-avocado-200: oklch(0.98 0.04 113.22);
+  --color-avocado-300: oklch(0.94 0.11 115.03);
+  --color-avocado-400: oklch(0.92 0.19 114.08);
+  --color-avocado-500: oklch(0.84 0.18 117.33);
+  --color-avocado-600: oklch(0.53 0.12 118.34);
+
+  --gradient: linear-gradient(90deg, #5266ff 0%, #b871ff 100%);
+}
+
+:root {
+  font-family:
+    DM Sans,
+    Roboto system-ui,
+    Avenir,
+    Helvetica,
+    Arial,
+    sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  /* color-scheme: light dark; */
+  color-scheme: light;
+  /* color: rgba(255, 255, 255, 0.87); */
+
+  background-color: white;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* VARIABLES PARA SCROLLBAR */
+
+  --sb-thumb-color: #7169ff;
+  --sb-size: 4px;
+}
+
+/* Estilos para el scrollbar General */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Track del scrollbar */
+::-webkit-scrollbar-track {
+  background: #758fff;
+}
+
+/* Thumb del scrollbar (la barra en sí) */
+::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 2px;
+}
+
+/* Al pasar el mouse sobre el thumb */
+::-webkit-scrollbar-thumb:hover {
+  background: #758fff;
+}
+
+/* Estilos para el Sidebar Scroll */
+.sidebar-scrollbar::-webkit-scrollbar {
+  width: 2px;
+}
+
+/* Track del scrollbar */
+.sidebar-scrollbar::-webkit-scrollbar-track {
+  background: #758fff;
+}
+
+/* Thumb del scrollbar (la barra en sí) */
+.sidebar-scrollbar::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 2px;
+}
+
+/* Al pasar el mouse sobre el thumb */
+.sidebar-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #758fff;
+}
+
+/* SCROLLBAR DE TABLAS */
+
+.table-scrollbar::-webkit-scrollbar:horizontal {
+  height: 3px;
+  border-radius: 2px;
+}
+
+.table-scrollbar::-webkit-scrollbar-track:horizontal {
+  border-radius: 20px;
+  background-color: white;
+}
+
+/* SCROLLBAR DE TEXTAREA */
+
+.text-scrollbar::-webkit-scrollbar {
+  width: 3px;
+  border-radius: 2px;
+}
+
+.text-scrollbar::-webkit-scrollbar-track {
+  border-radius: 20px;
+  background-color: whitesmoke;
+}
+
+.text-scrollbar::-webkit-scrollbar-thumb {
+  background: #cfcedd;
+  border-radius: 2px;
+}
+
+.text-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
+  border-radius: 2px;
+}
+
+/* OCULTAR BOTONES EN INPUT TYPE NUMBER */
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  appearance: textfield;
+  -moz-appearance: textfield;
+}
+
+input[type="checkbox"] {
+  background: white;
+  /* accent-color: green; */
+}
+
+textarea {
+  resize: none;
+}
+
+ul {
+  list-style-type: disc !important;
+  /* Viñetas para las listas */
+  margin-left: 20px !important;
+  /* Margen izquierdo para alineación */
+}
+
+br {
+  display: block;
+  margin: 0.1em 0 !important;
+  content: "";
+}
