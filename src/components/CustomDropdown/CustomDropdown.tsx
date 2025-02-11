@@ -1,5 +1,5 @@
 import { JSX, RefObject } from 'react';
-import { Popover, PopoverTrigger, PopoverContent } from '@nextui-org/popover';
+import { Popover, PopoverTrigger, PopoverContent } from '@heroui/react';
 import { Props as ContainerProps } from './CustomDropdown.container';
 
 interface Props extends ContainerProps {

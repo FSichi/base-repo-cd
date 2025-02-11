@@ -1,7 +1,6 @@
 import { ReactNode } from 'react';
 import ImgLogo from 'assets/img/logo-white.png';
-import Styles from './PageLayout.styled';
-import { QuoteSection } from './Element/QuoteSection';
+import { Styles } from './PageLayout.styled';
 import { CopyrigthText } from 'utils/constants/appConstants';
 
 interface Props {
@@ -15,12 +14,11 @@ export const PublicPageLayout = ({ children, customClassName }: Props) => {
             <section className={Styles.public.gradientSection}>
                 <img
                     src={ImgLogo}
-                    alt="LogoIMG Codetria"
+                    alt='LogoIMG Codetria'
                     className={Styles.public.logoImg}
                     width={192}
                     height={41}
                 />
-                <QuoteSection />
                 <p className={Styles.public.copyrigth}>{CopyrigthText}</p>
             </section>
             <section className={Styles.public.containerPage}>{children}</section>

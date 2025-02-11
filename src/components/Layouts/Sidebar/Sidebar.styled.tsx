@@ -12,5 +12,3 @@ export const Styles = {
 
     iconContainer: 'ml-3 mr-4 group-hover:stroke-white',
 };
-
-export default Styles;

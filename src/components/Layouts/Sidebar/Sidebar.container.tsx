@@ -19,7 +19,7 @@ export const SidebarContainer = (props: Props) => {
     const y = useMotionValue(0);
 
     const sidebarRoutesFiltered = useMemo(
-        () => getSidebarRoutesForRole(credentials?.user.roles || []),
+        () => getSidebarRoutesForRole(['ADMIN']),
         [credentials?.user.roles],
     );
 

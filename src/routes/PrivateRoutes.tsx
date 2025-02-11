@@ -15,17 +15,17 @@ export const PrivateRoutes = () => {
     const { credentials } = useAuthContext();
 
     return (
-        <section className="min-h-screen flex flex-col">
+        <section className='min-h-screen flex flex-col'>
             <Header />
 
             {credentials?.company?.id === undefined ? (
                 <Spinner />
             ) : (
                 <>
-                    <section className="flex-1 flex">
+                    <section className='flex-1 flex'>
                         <Sidebar />
 
-                        <PageLayout customClassName="w-full bg-[#F6F6F6] rounded-tl-[20px]">
+                        <PageLayout customClassName='w-full bg-[#F6F6F6] rounded-tl-[20px]'>
                             <Suspense fallback={<Spinner />}>
                                 <Routes>
                                     {PrivateRoutesList.map(({ Component, path }, i) => (

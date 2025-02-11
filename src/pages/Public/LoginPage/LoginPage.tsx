@@ -38,7 +38,7 @@ export const LoginPage = (props: Props) => {
                 <h1>{t('login_welcome')}</h1>
                 <p className={Styles.subtitle}>{t('login_subtitle')}</p>
             </div>
-            <form onSubmit={handleSubmit} className='grid gap-4 text-cia-white mt-0'>
+            <form onSubmit={handleSubmit} className='grid gap-4 text-white mt-0'>
                 <div>
                     <p>{t('login_input_email')}</p>
                     <input

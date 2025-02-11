@@ -1,5 +1,5 @@
 import { ReactNode } from 'react';
-import Styles from './PageLayout.styled';
+import { Styles } from './PageLayout.styled';
 
 interface Props {
     children: ReactNode;

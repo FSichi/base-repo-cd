@@ -1,3 +1,4 @@
+/* eslint-disable react-refresh/only-export-components */
 import { createContext, useState, ReactNode, SetStateAction, useMemo } from 'react';
 
 interface IntialState {
@@ -11,7 +12,7 @@ interface DrawerProviderProps {
     children: ReactNode;
 }
 
-const DrawerContext = createContext({} as IntialState);
+export const DrawerContext = createContext({} as IntialState);
 
 const PaginationProvider = ({ children }: DrawerProviderProps) => {
     const [drawer, setDrawer] = useState(false);

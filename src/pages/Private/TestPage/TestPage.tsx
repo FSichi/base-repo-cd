@@ -6,7 +6,6 @@ interface Props extends ContainerProps {
     t: ITranslate;
 }
 
-export const TestPage = (props: Props) => {
-    const { t } = props;
+export const TestPage = (_props: Props) => {
     return <section className={Styles.container}>TestPage</section>;
 };
