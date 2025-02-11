@@ -1,50 +1,9 @@
-# React + TypeScript + Vite
+# React + Typescript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Esta solución está construida utilizando React, Vite y TypeScript, implementando el patrón Container-Presentational para una arquitectura más modular y escalable. Los componentes presentacionales se centran exclusivamente en la interfaz de usuario (UI), mientras que los contenedores manejan la lógica de negocio, estado y comunicación con servicios externos.
 
-Currently, two official plugins are available:
+La aplicación está compuesta por Page Components, que integran la vista y la lógica, apoyándose en UI Components reutilizables para una experiencia consistente. Para gestionar el estado y la lógica compartida, se implementan Custom Hooks y Custom Contexts, lo que facilita el manejo eficiente del estado global, conexiones con WebSocket, y otras funcionalidades clave.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Las comunicaciones con el backend están centralizadas en instancias de Axios, gestionando eficientemente las interacciones con las APIs a través de DB Services y DB Hooks.
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+El uso de Common Components, utilidades y helpers garantiza una alta reutilización del código y facilita la escalabilidad futura del proyecto.

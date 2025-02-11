@@ -14,15 +14,24 @@
     "create-page": "node create-component.cjs page",
     "create-form-page": "node create-component.cjs form"
   },
-  "dependencies": {
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0"
-  },
   "eslintConfig": {
     "extends": [
       "react-app",
       "react-app/jest"
     ]
+  },
+  "dependencies": {
+    "@tanstack/react-query": "^5.66.0",
+    "@tanstack/react-query-devtools": "^5.66.0",
+    "axios": "^1.7.9",
+    "i18next": "^24.2.2",
+    "i18next-browser-languagedetector": "^8.0.2",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-hot-toast": "^2.5.1",
+    "react-i18next": "^15.4.0",
+    "react-router-dom": "^7.1.5",
+    "react-select": "^5.10.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.19.0",

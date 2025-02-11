@@ -28,8 +28,14 @@ export default tseslint.config(
       rules: {
         ...reactHooks.configs.recommended.rules,
         "no-unused-vars": "off",
-        "@typescript-eslint/no-unused-vars": "warn",
+        "@typescript-eslint/no-unused-vars": "off",
+        "@typescript-eslint/no-explicit-any": "off",
         "no-use-before-define": "off",
+        "no-unused-expressions": "off",
+        "react-refresh/only-export-components": "error",
+        "@typescript-eslint/no-unused-expressions": "off",
+        "@typescript-eslint/no-empty-object-type": "off",
+        "@typescript-eslint/no-non-null-asserted-optional-chain": "off",
         "@typescript-eslint/no-use-before-define": ["warn", { typedefs: false }],
         "react-refresh/only-export-components": [
           "warn",
