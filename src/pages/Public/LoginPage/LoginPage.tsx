@@ -38,9 +38,9 @@ export const LoginPage = (props: Props) => {
                 <h1>{t('login_welcome')}</h1>
                 <p className={Styles.subtitle}>{t('login_subtitle')}</p>
             </div>
-            <form onSubmit={handleSubmit} className='grid gap-4 text-white mt-0'>
+            <form onSubmit={handleSubmit} className='grid gap-4'>
                 <div>
-                    <p>{t('login_input_email')}</p>
+                    <p className={Styles.label}>{t('login_input_email')}</p>
                     <input
                         id='username'
                         name='username'
@@ -53,7 +53,7 @@ export const LoginPage = (props: Props) => {
                     />
                 </div>
                 <div>
-                    <p>{t('login_input_password')}</p>
+                    <p className={Styles.label}>{t('login_input_password')}</p>
                     <div className={Styles.passwordContainer}>
                         <input
                             id='password'
@@ -77,12 +77,7 @@ export const LoginPage = (props: Props) => {
                     {t('login_forgot_password')}
                 </Link>
 
-                <Button
-                    type='submit'
-                    variant='primary'
-                    text='Iniciar Sesión'
-                    disabled={isLoading}
-                    customStyles='!rounded-lg'>
+                <Button type='submit' variant='primary' text='Iniciar Sesión' disabled={isLoading}>
                     <div className='flex items-center gap-3'>
                         {isLoading && <Spinner size='small' height='h-[20px]' />}
                         <p> Iniciar Sesión</p>

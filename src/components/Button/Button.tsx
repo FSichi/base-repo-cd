@@ -18,6 +18,7 @@ export const Button = (props: Props) => {
         customStyles,
         textStyles,
         iconLocation,
+        rounded,
     } = props;
 
     const St = Styles({
@@ -28,6 +29,7 @@ export const Button = (props: Props) => {
         customStyles,
         iconLocation,
         textStyles,
+        rounded,
     });
 
     return (

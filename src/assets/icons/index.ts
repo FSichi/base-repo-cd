@@ -71,6 +71,8 @@ import CloseIcon from './close-x.svg?react';
 import LikeIcon from './like-button.svg?react';
 import DislikeIcon from './dislike-button.svg?react';
 import FixIcon from './fix.svg?react';
+import ShowPasswordIcon from './show-password.svg?react';
+import HidePasswordIcon from './hide-password.svg?react';
 
 export {
     FixIcon,
@@ -89,6 +91,8 @@ export {
     CalendarIcon,
     ShowPasswordSVG,
     HidePasswordSVG,
+    ShowPasswordIcon,
+    HidePasswordIcon,
     CommonArrowSVG,
     CommonArrowIcon,
     ButtonArrowSVG,

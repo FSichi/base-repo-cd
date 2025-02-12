@@ -1,3 +1,5 @@
+import { ButtonRounded } from 'utils/interfaces/ui';
+
 interface Props {
     size?: 'small' | 'default' | 'large';
     variant?: 'primary' | 'secondary' | 'tertiary' | 'transparent';
@@ -6,6 +8,7 @@ interface Props {
     customStyles?: string;
     iconLocation?: 'left' | 'right';
     textStyles?: string;
+    rounded?: ButtonRounded;
 }
 
 export const Styles = ({
@@ -16,9 +19,9 @@ export const Styles = ({
     customStyles = '',
     iconLocation = 'left',
     textStyles,
+    rounded,
 }: Props) => {
-    const baseStyles =
-        'px-6 py-3 rounded-lg font-medium text-base z-10 flex justify-center items-center transition-all duration-200 ease-in-out cursor-pointer';
+    const baseStyles = `px-6 py-3 rounded-${rounded} font-medium typography-text z-10 flex justify-center items-center transition-all duration-300 ease-in-out cursor-pointer`;
 
     const sizeClasses = {
         small: 'text-sm h-small',
@@ -35,27 +38,29 @@ export const Styles = ({
     const variantStyles = {
         primary: {
             base: baseStyles,
-            background: 'bg-gradient hover:bg-hoverBPGradient hover:shadow-shadowButton',
+            background: 'bg-primary-500 hover:bg-primary-700 hover:shadow-shadowButton',
             text: textStyles ?? 'text-white',
             border: 'border-none',
-            active: 'active:bg-activeBPGradient active:shadow-shadowButton',
-            disabled: 'disabled:hover:bg-gradient disabled:shadow-transparent disabled:opacity-50',
+            active: 'active:bg-primary-900 active:shadow-shadowButton',
+            disabled:
+                'disabled:hover:bg-primary-500 disabled:shadow-transparent disabled:opacity-50',
         },
         secondary: {
             base: baseStyles,
-            background: 'bg-white hover:bg-cia-purpleBlue-main',
-            text: textStyles ?? 'text-cia-gray-dark hover:text-white',
-            border: 'border border-cia-grey-light',
-            active: 'active:bg-activeBSGradient',
-            disabled: 'disabled:bg-disabledBSGradient disabled:border-none disabled:text-white',
+            background: 'bg-white hover:bg-primary-500',
+            text: textStyles ?? 'text-text hover:text-white',
+            border: 'border border-gray-400',
+            active: 'active:bg-primary-700 active:shadow-shadowButton',
+            disabled: 'disabled:bg-primary-400/50 disabled:border-none disabled:text-white',
         },
         tertiary: {
             base: baseStyles,
-            background: 'bg-transparent hover:bg-[#E9E9FF]',
-            text: textStyles ?? 'text-cia-purpleBlue-main',
-            border: 'border border-cia-grey-light',
-            active: 'active:bg-cia-purpleBlue-main active:text-white',
-            disabled: 'disabled:hover:bg-transparent disabled:text-[#ACA9E3]',
+            background: 'bg-transparent hover:bg-primary-500',
+            text: textStyles ?? 'text-primary-500 hover:text-white',
+            border: 'border border-primary-400',
+            active: 'active:bg-primary-700 active:text-white',
+            disabled:
+                'disabled:hover:bg-transparent disabled:text-[#ACA9E3] disabled:border-gray-400',
         },
         transparent: {
             base: baseStyles,

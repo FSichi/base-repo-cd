@@ -1,4 +1,5 @@
 @import "tailwindcss";
+/* @config "../tailwind.config.js"; */
 
 @theme {
   /*  
@@ -13,14 +14,105 @@
   --spacing-medium: 40px;
   --spacing-large: 48px;
 
-  --color-avocado-100: oklch(0.99 0 0);
-  --color-avocado-200: oklch(0.98 0.04 113.22);
-  --color-avocado-300: oklch(0.94 0.11 115.03);
-  --color-avocado-400: oklch(0.92 0.19 114.08);
-  --color-avocado-500: oklch(0.84 0.18 117.33);
-  --color-avocado-600: oklch(0.53 0.12 118.34);
+  --color-moon: #E9F4FF;
+  --color-background-light: #f8f8f8;
+  --color-background-dark: #1a202c;
 
-  --gradient: linear-gradient(90deg, #5266ff 0%, #b871ff 100%);
+  --color-text: oklch(27.49% 0.019 258.37);
+
+  --color-primary-50: oklch(96.60% 0.012 281.08);
+  --color-primary-100: oklch(92.50% 0.025 278.36);
+  --color-primary-200: oklch(86.66% 0.046 277.26);
+  --color-primary-300: oklch(77.86% 0.077 273.79);
+  --color-primary-400: oklch(66.65% 0.119 273.54);
+  --color-primary-500: oklch(57.00% 0.159 274.85);
+  --color-primary-600: oklch(49.97% 0.179 275.95);
+  --color-primary-700: oklch(44.83% 0.180 276.70);
+  --color-primary-800: oklch(40.39% 0.145 279.16);
+  --color-primary-900: oklch(35.88% 0.113 279.68);
+  --color-primary-950: oklch(27.91% 0.067 283.64);
+
+  --color-secondary-50: oklch(98.16% 0.016 79.35);
+  --color-secondary-100: oklch(96.17% 0.041 85.29);
+  --color-secondary-200: oklch(91.56% 0.077 79.32);
+  --color-secondary-300: oklch(86.07% 0.121 75.66);
+  --color-secondary-400: oklch(78.83% 0.157 64.65);
+  --color-secondary-500: oklch(73.40% 0.181 54.11);
+  --color-secondary-600: oklch(67.58% 0.185 47.09);
+  --color-secondary-700: oklch(57.59% 0.166 43.47);
+  --color-secondary-800: oklch(48.65% 0.137 42.25);
+  --color-secondary-900: oklch(42.36% 0.112 43.75);
+  --color-secondary-950: oklch(27.42% 0.074 41.18);
+
+  /* TIPOGRAFÍA */
+
+  --font-size-display: clamp(1.5rem, 4vw, 2.5rem);
+  --line-height-display: 1.2;
+
+  --font-size-title: clamp(1.25rem, 3vw, 2rem);
+  --line-height-title: 1.3;
+
+  --font-size-subtitle: clamp(1rem, 2.5vw, 1.75rem);
+  --line-height-subtitle: 1.4;
+
+  --font-size-lead: clamp(0.875rem, 2vw, 1.25rem);
+  --line-height-lead: 1.45;
+
+  --font-size-text: clamp(0.75rem, 1.8vw, 1rem);
+  --line-height-text: 1.5;
+
+  --font-size-caption: clamp(0.625rem, 1.5vw, 0.875rem);
+  --line-height-caption: 1.4;
+
+  --font-size-small: clamp(0.5rem, 1vw, 0.75rem);
+  --line-height-small: 1.3;
+
+  /* PESOS TIPOGRÁFICOS */
+  --font-weight-bold: 700;
+  --font-weight-medium: 500;
+  --font-weight-regular: 400;
+}
+
+.typography-display {
+  font-size: var(--font-size-display);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-display);
+}
+
+.typography-title {
+  font-size: var(--font-size-title);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-title);
+}
+
+.typography-subtitle {
+  font-size: var(--font-size-subtitle);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-subtitle);
+}
+
+.typography-lead {
+  font-size: var(--font-size-lead);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-lead);
+}
+
+.typography-text {
+  font-size: var(--font-size-text);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-text);
+}
+
+.typography-caption {
+  font-size: var(--font-size-caption);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-caption);
+}
+
+.typography-small {
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-small);
 }
 
 :root {

@@ -1,12 +1,12 @@
 import { memo, ReactNode } from 'react';
 import { Button } from './Button';
-
-export type ButtonVariants = 'primary' | 'secondary' | 'tertiary' | 'transparent';
+import { ButtonRounded, ButtonSizes, ButtonVariants } from 'utils/interfaces/ui';
 
 export interface Props {
     type?: 'submit' | 'button' | 'reset';
     variant?: ButtonVariants;
-    size?: 'small' | 'default' | 'large';
+    size?: ButtonSizes;
+    rounded?: ButtonRounded;
     disabled?: boolean;
     onClick?: () => void;
     text?: string;
@@ -20,7 +20,13 @@ export interface Props {
 }
 
 export const ButtonContainer = (props: Props) => {
-    const { type = 'button', variant = 'primary', size = 'default', iconLocation = 'left' } = props;
+    const {
+        type = 'button',
+        variant = 'primary',
+        size = 'default',
+        iconLocation = 'left',
+        rounded = 'lg',
+    } = props;
 
     const childProps = {
         ...props,
@@ -28,6 +34,7 @@ export const ButtonContainer = (props: Props) => {
         variant,
         size,
         iconLocation,
+        rounded,
     };
 
     return <Button {...childProps} />;
